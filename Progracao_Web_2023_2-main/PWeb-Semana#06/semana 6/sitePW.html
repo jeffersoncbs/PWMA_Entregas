@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>
+        Vulcano Coworking
+    </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="rl.css">
+
+</head>
+
+<body>
+
+
+    <button id="log">Log-in</button>
+    <button id="cadastrar">Cadastrar</button>
+
+    <script>
+        var login, pass;
+        var cad, user, senha;
+
+        // Captura o botão pelo ID
+        const b1_Login = document.getElementById("log");
+        const b2_Cadastro = document.getElementById("cadastrar");
+
+        b1_Login.addEventListener("click", function() {
+            login = window.prompt('Inisra seu de username:');
+            pass = window.prompt('Olá '+ login +'! Insira sua senha:')
+            alert ('Olá ' + login + '! Bem-vindo de volta');
+        }); 
+
+        b2_Cadastro.addEventListener("click", function() {
+            cad = window.prompt('Insira seu email:');
+            senha = window.prompt('Crie a sua senha:');
+            user = window.prompt('Digite seu novo username:');
+            alert ('Olá ' + user + '! Seja Bem-Vindo(a)');
+        }); 
+
+    </script>
+
+    <header>
+        <h1>Vulcano Coworking</h1>
+    </header>
+    <nav>
+        <a>Agende a sua Reunião</a>
+        <a> Locais Disponiveis</a>
+    </nav>
+    
+    <main>
+        Bem-vindo a Vulcano Coworking! Desenvolvemos uma solução moderna e intuitiva
+        para atender às suas necessidades de agendamento de espaços de trabalho compartilhados. Com a nossa plataforma,
+        você pode facilmente reservar estações de trabalho, salas de reunião e escritórios privativos de maneira
+        flexível e conveniente.
+    </main>
+    <footer>
+        <p>
+            <hr><br>
+             Para Contato: <br>
+            <a>Telefone: 4002-8922<br></a>
+            <a>Endereço: Rua Água</a>
+            <p><br></p>
+            <hr>
+        </p>
+    </footer>
+</body>
+
+</html>
