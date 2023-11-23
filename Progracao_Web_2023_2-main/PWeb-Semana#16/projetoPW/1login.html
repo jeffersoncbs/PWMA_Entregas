@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="1entrada.css">
+    <style>
+        .ola {
+            display: grid;
+            padding: 20px;
+            width: 100%;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function sLogin() {
+            var email;
+            var senha;
+            var mensagemConsistencia = "";
+            var regEmail = new RegExp(".+\@.+\..+"); /* x@y.z ja é considerado */
+            var regSenha = new RegExp("[A-z]{8,50}");
+
+            email = document.getElementById("email").value;
+            senha = document.getElementById("senha").value;
+
+            mensagemConsistencia = "";
+
+            if (!regEmail.test(email)) {
+                mensagemConsistencia = ("Email não encontrado");
+            }
+            else if (!regSenha.test(senha)) {
+                mensagemConsistencia = "Senha invalida";
+            }
+
+            if (mensagemConsistencia != "") {
+                alert(mensagemConsistencia);
+                return false;
+            } else {
+                window.location.href = 'sitePW.html';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+    <main>
+        <div class="ola">
+            <form>
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <br><br>
+                <button type="button" onclick="sLogin()">Entrar</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agenda.css">
+    <title>Agendar Espaço Coworking</title>
+    <script src="agendamento.js"></script>
+</head>
+<body>
+    <header>
+        Agendamento de Espaço Coworking
+    </header>
+    <main>
+        <div class="titulo">
+            <span>Preencha os dados para agendar</span>
+        </div>
+        <div class="card">
+            <div class="entrada">
+                <label>ID do Local</label>
+                <input type="number" id="idLocal" required>
+            </div>
+            <div class="entrada">
+                <label>Forma de Pagamento</label>
+                <input type="text" id="formaPagamento" placeholder="debito - credito - pix" required>
+            </div>
+            <div class="entrada">
+                <label>CPF</label>
+                <input type="number" id="cpf" required>
+            </div>
+            <button onclick="agendarEspaco()">Agendar Espaço</button>
+        </div>
+    </main>
+</body>
+</html>
